@@ -1,14 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
+import MarsPix from "./Components/MarsPix"
+import MarsWords from "./Components/MarsWords"
 
-function App() {
+import Rover from "./Components/Rover"
+
+
+const App =  () => {
+const [cars, setCars]=  useState( "caraOb")
+// const addCar= () => {  setCars([
+	
+// ])
+// }
+
+// addCar()
+      	// console.log({cars})
+
   return (
+
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+    <h1> Nicks NASA Nook</h1>
+      	<MarsPix />
+      	<MarsWords/> 
+      	<Rover cars = {cars}/>
+
+      
     </div>
+
   );
 }
 
